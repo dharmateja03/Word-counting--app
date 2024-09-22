@@ -13,13 +13,13 @@ def update_view_count(view_count):
         f.write(str(view_count))
 
 # Get the current view count
-view_count = get_view_count()
+# view_count = get_view_count()
 
-# Increment the view count
-view_count += 1
+# # Increment the view count
+# view_count += 1
 
 # Update the file with the new view count
-update_view_count(view_count)
+# update_view_count(view_count)
 # Function to count words
 def count_words(text):
     word_count = {}
