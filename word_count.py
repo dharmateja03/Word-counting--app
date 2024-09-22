@@ -1,5 +1,25 @@
 import streamlit as st
+# Function to read and update view count from a file
+def get_view_count():
+    try:
+        with open("view_count.txt", "r") as f:
+            view_count = int(f.read())
+    except FileNotFoundError:
+        view_count = 0  # Initialize to 0 if the file does not exist
+    return view_count
 
+def update_view_count(view_count):
+    with open("view_count.txt", "w") as f:
+        f.write(str(view_count))
+
+# Get the current view count
+view_count = get_view_count()
+
+# Increment the view count
+view_count += 1
+
+# Update the file with the new view count
+update_view_count(view_count)
 # Function to count words
 def count_words(text):
     word_count = {}
